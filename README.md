@@ -4,7 +4,7 @@ An end-to-end DevOps pipeline that builds, scans, containerizes and deploys a Re
 > 
 > 📄 **Full project documentation:** [`Capstone_Project.pdf`](./Capstone_Project.pdf)
 
-##Architecture Diagram
+## Architecture Diagram
 ![Architecture](images/architecture.png)
 
 ## Highlights
