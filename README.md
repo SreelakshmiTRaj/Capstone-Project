@@ -1,4 +1,5 @@
 # Automated Application Delivery on AWS with Jenkins, Terraform, Ansible & ECS
+> 📄 **Full project documentation:** [`Capstone_Project.pdf`](./Capstone_Project.pdf)
 
 An end-to-end DevOps pipeline that builds, scans, containerizes and deploys a React + Vite **Quiz App** to **Amazon ECS (Fargate)** using **Blue/Green deployment**, with infrastructure provisioned by **Terraform**, servers configured by **Ansible**, and monitoring/alerting through **CloudWatch + Grafana**.
 
