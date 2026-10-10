@@ -632,4 +632,4 @@ Grafana reads ECS and ALB metrics from CloudWatch, with Blue and Green series sh
 
 ## Author
 
-**Sreelakshmi T Raj** · [GitHub](https://github.com/SreelakshmiTRaj)
+**Sreelakshmi T Raj** 
