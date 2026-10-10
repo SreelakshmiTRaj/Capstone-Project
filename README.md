@@ -4,8 +4,6 @@ An end-to-end DevOps pipeline that builds, scans, containerizes and deploys a Re
 
 > 📄 **Full project documentation:** [`Capstone_Project.pdf`](./doc/Capstone_Project.pdf)
 
-> **Application:** the React + Vite Quiz App deployed in this project is available here: [Quiz App](https://github.com/SreelakshmiTRaj/Quiz-App)
-
 ## Architecture Diagram
 ![Architecture](images/architecture.png)
 
@@ -110,6 +108,7 @@ Images are tagged with the Jenkins build number, so the exact image that passed 
 - The Ansible Docker collection: `ansible-galaxy collection install community.docker`
 
 Placeholders used below: `<AWS_ACCOUNT_ID>`, `<AWS_REGION>`, `<IMAGE_TAG>`, `<MANAGED_EC2_PUBLIC_IP>`, `<CONTROL_EC2_PUBLIC_IP>`. Replace them with your own values.
+> **Application:** the React + Vite Quiz App deployed in this project is available here: [Quiz App](https://github.com/SreelakshmiTRaj/Quiz-App)
 
 ## Implementation Steps
 
