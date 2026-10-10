@@ -104,7 +104,7 @@ Images are tagged with the Jenkins build number, so the exact image that passed 
 - **Control EC2** (Ubuntu) with SSH access and enough resources for Jenkins and the build tools. Install **Jenkins, Terraform, AWS CLI, Ansible, Docker (usable by the Jenkins user), Trivy and the SonarScanner CLI**.
 - An **IAM role** on the Control EC2 that allows Terraform, ECR, ECS, ELB and CodeCommit access.
 - A **key pair** that lets the Control EC2 SSH into the Managed EC2.
-- A **Git / AWS CodeCommit repository** containing the app ([Quiz App source](https://github.com/SreelakshmiTRaj/Quiz-App), with `package.json` and `package-lock.json`), Terraform code, Ansible playbooks and Jenkinsfiles.
+- A **Git / AWS CodeCommit repository** containing the app (with `package.json` and `package-lock.json`), Terraform code, Ansible playbooks and Jenkinsfiles.
 - The Ansible Docker collection: `ansible-galaxy collection install community.docker`
 
 Placeholders used below: `<AWS_ACCOUNT_ID>`, `<AWS_REGION>`, `<IMAGE_TAG>`, `<MANAGED_EC2_PUBLIC_IP>`, `<CONTROL_EC2_PUBLIC_IP>`. Replace them with your own values.
