@@ -3,6 +3,8 @@
 An end-to-end DevOps pipeline that builds, scans, containerizes and deploys a React + Vite **Quiz App** to **Amazon ECS (Fargate)** using **Blue/Green deployment**, with infrastructure provisioned by **Terraform**, servers configured by **Ansible**, and monitoring/alerting through **CloudWatch + Grafana**.
 
 > 📄 **Full project documentation:** [`Capstone_Project.pdf`](./doc/Capstone_Project.pdf)
+>
+> > **Application:** the React + Vite Quiz App deployed in this project is available here: [Quiz App source code](https://github.com/SreelakshmiTRaj/Quiz-App)
 
 ## Architecture Diagram
 ![Architecture](images/architecture.png)
@@ -104,7 +106,7 @@ Images are tagged with the Jenkins build number, so the exact image that passed 
 - **Control EC2** (Ubuntu) with SSH access and enough resources for Jenkins and the build tools. Install **Jenkins, Terraform, AWS CLI, Ansible, Docker (usable by the Jenkins user), Trivy and the SonarScanner CLI**.
 - An **IAM role** on the Control EC2 that allows Terraform, ECR, ECS, ELB and CodeCommit access.
 - A **key pair** that lets the Control EC2 SSH into the Managed EC2.
-- A **Git / AWS CodeCommit repository** containing the app (with `package.json` and `package-lock.json`), Terraform code, Ansible playbooks and Jenkinsfiles.
+- A **Git / AWS CodeCommit repository** containing the app ([Quiz App source](https://github.com/SreelakshmiTRaj/Quiz-App), with `package.json` and `package-lock.json`), Terraform code, Ansible playbooks and Jenkinsfiles.
 - The Ansible Docker collection: `ansible-galaxy collection install community.docker`
 
 Placeholders used below: `<AWS_ACCOUNT_ID>`, `<AWS_REGION>`, `<IMAGE_TAG>`, `<MANAGED_EC2_PUBLIC_IP>`, `<CONTROL_EC2_PUBLIC_IP>`. Replace them with your own values.
@@ -631,4 +633,4 @@ Grafana reads ECS and ALB metrics from CloudWatch, with Blue and Green series sh
 
 ## Author
 
-**Sreelakshmi T Raj**: [Quiz App source](https://github.com/SreelakshmiTRaj/Quiz-App)
+**Sreelakshmi T Raj** · [GitHub](https://github.com/SreelakshmiTRaj)
