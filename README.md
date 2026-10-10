@@ -2,6 +2,9 @@
 
 An end-to-end DevOps pipeline that builds, scans, containerizes and deploys a React + Vite **Quiz App** to **Amazon ECS (Fargate)** using **Blue/Green deployment**, with infrastructure provisioned by **Terraform**, servers configured by **Ansible**, and monitoring/alerting through **CloudWatch + Grafana**.
 
+> 📄 **Full project documentation:** [`Capstone_Project.pdf`](./Capstone_Project.pdf)
+
+## Architecture Diagram
 ![Architecture](images/architecture.png)
 
 ## Highlights
@@ -95,8 +98,6 @@ Images are tagged with the Jenkins build number, so the exact image that passed 
 └── images/                   # README screenshots
 ```
 
-> Adjust the layout above to match the repo.
-
 ## Prerequisites
 
 - **AWS account** with permission to create VPC, EC2, ECR, ECS, ALB, IAM and CloudWatch resources.
@@ -109,8 +110,6 @@ Images are tagged with the Jenkins build number, so the exact image that passed 
 Placeholders used below: `<AWS_ACCOUNT_ID>`, `<AWS_REGION>`, `<IMAGE_TAG>`, `<MANAGED_EC2_PUBLIC_IP>`, `<CONTROL_EC2_PUBLIC_IP>`. Replace them with your own values.
 
 ## Implementation Steps
-
-Only the key code is shown here. Full files are in the repo.
 
 ### Step 1: Containerize the app
 
@@ -617,11 +616,10 @@ Grafana reads ECS and ALB metrics from CloudWatch, with Blue and Green series sh
 |---|---|
 | ![Unhealthy firing](images/alert-unhealthy-firing.png) | ![Unhealthy normal](images/alert-unhealthy-normal.png) |
 
-## Notes & Possible Improvements
+## Notes
 
 - Control EC2 is a deliberate bootstrap exception; everything else is Terraform-managed.
 - Blue/Green is implemented with two ECS services plus ALB listener switching, not CodeDeploy.
-- Ideas: HTTPS on the ALB, remote Terraform state (S3 + DynamoDB), automated rollback on failed validation, notification channel (SNS/Slack) for Grafana alerts.
 
 ## Author
 
