@@ -2,7 +2,7 @@
 
 An end-to-end DevOps pipeline that builds, scans, containerizes and deploys a React + Vite **Quiz App** to **Amazon ECS (Fargate)** using **Blue/Green deployment**, with infrastructure provisioned by **Terraform**, servers configured by **Ansible**, and monitoring/alerting through **CloudWatch + Grafana**.
 
-> 📄 **Full project documentation:** [`Capstone_Project.pdf`](./doc/Capstone_Project.pdf)
+> 📄 **Full project documentation:** (./doc/Capstone_Project.pdf)
 
 ## Architecture Diagram
 ![Architecture](images/architecture.png)
